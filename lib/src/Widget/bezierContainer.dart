@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:uber/src/const/colors.dart';
 
 import 'customClipper.dart';
 
@@ -22,9 +23,15 @@ class BezierContainer extends StatelessWidget {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                Color(0xfffbb448),
-                Color(0xffe46b10),
+                AppColor.orange,
+                Color.fromARGB(255, 246, 131, 74),
+                Color.fromARGB(255, 240, 218, 185),
               ],
+              stops: [
+                0.2,
+                1.0,
+                2.0,
+              ], // Adjust these values for a smoother gradient
             ),
           ),
         ),

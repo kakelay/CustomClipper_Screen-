@@ -120,18 +120,18 @@ class _WelcomePageState extends State<WelcomePage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          padding:const  EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
-            borderRadius:const  BorderRadius.all(Radius.circular(5)),
+            borderRadius: const BorderRadius.all(Radius.circular(5)),
             boxShadow: <BoxShadow>[
               BoxShadow(
                   color: Colors.grey.shade200,
-                  offset:const  Offset(2, 4),
+                  offset: const Offset(2, 4),
                   blurRadius: 5,
                   spreadRadius: 2)
             ],
-            gradient:const  LinearGradient(
+            gradient: const LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
@@ -144,9 +144,8 @@ class _WelcomePageState extends State<WelcomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-           const   Text("fsdfsdfsdfsdfsdfsdfsdf"),
               _title(),
-           const    SizedBox(
+              const SizedBox(
                 height: 80,
               ),
               _submitButton(),

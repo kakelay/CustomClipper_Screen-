@@ -60,7 +60,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   Widget _submitButton() {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 15),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       width: MediaQuery.of(context).size.width,
       alignment: Alignment.center,
       decoration: BoxDecoration(
@@ -88,9 +88,9 @@ class _SignUpPageState extends State<SignUpPage> {
         ),
       ),
       child: const Text(
-        'Register Now',
+        'Register Now 111',
         style: TextStyle(
-            fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
+            fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
       ),
     );
   }
@@ -110,7 +110,7 @@ class _SignUpPageState extends State<SignUpPage> {
           children: <Widget>[
             Text(
               'Already have an account ?',
-              style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+              style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
             ),
             SizedBox(
               width: 10,
@@ -132,18 +132,18 @@ class _SignUpPageState extends State<SignUpPage> {
     return RichText(
       textAlign: TextAlign.center,
       text: const TextSpan(
-          text: 'd',
+          text: 'និ',
           style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.w700,
               color: Color(0xffe46b10)),
           children: [
             TextSpan(
-              text: 'ev',
+              text: 'មិ',
               style: TextStyle(color: Colors.black, fontSize: 30),
             ),
             TextSpan(
-              text: 'rnz',
+              text: 'ត្ត',
               style: TextStyle(color: Color(0xffe46b10), fontSize: 30),
             ),
           ]),
@@ -173,30 +173,41 @@ class _SignUpPageState extends State<SignUpPage> {
               right: -MediaQuery.of(context).size.width * .4,
               child: const BezierContainer(),
             ),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    SizedBox(height: height * .2),
-                    _title(),
-                    const SizedBox(
-                      height: 50,
-                    ),
-                    _emailPasswordWidget(),
-                    const SizedBox(
-                      height: 20,
-                    ),
-                    _submitButton(),
-                    SizedBox(height: height * .14),
-                    _loginAccountLabel(),
-                  ],
+            Stack(
+              children: [
+                Positioned(
+                  right: 105,
+                  bottom: 260,
+                  width: 200,
+                  height: 900,
+                  child: Image.network(
+                    'https://www.ccc.gov.kh/images/images/Logo-new.png',
+                  ),
                 ),
-              ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      SizedBox(height: height * .2),
+                      _title(),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      _emailPasswordWidget(),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      _submitButton(),
+                      SizedBox(height: height * .1),
+                      _loginAccountLabel(),
+                    ],
+                  ),
+                ),
+              ],
             ),
-            Positioned(top: 40, left: 0, child: _backButton()),
+            Positioned(top: 50, left: 0, child: _backButton()),
           ],
         ),
       ),
